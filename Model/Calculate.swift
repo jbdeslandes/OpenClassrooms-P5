@@ -31,7 +31,7 @@ class Calculate {
         }
         return true
     }
-    
+
     var canAddOperator: Bool {
         if let stringNumber = stringNumbers.last {
             if stringNumber.isEmpty {
@@ -44,9 +44,9 @@ class Calculate {
         return true
     }
 
-    
+
     // MARK: - Methods
-    
+
     func addNewNumber(_ newNumber: Int) {
         if let stringNumber = stringNumbers.last {
             var stringNumberMutable = stringNumber
@@ -55,12 +55,12 @@ class Calculate {
         }
         updateDisplay()
     }
-    
+
     func calculateTotal() {
         if !isExpressionCorrect {
             return
         }
-        
+
         var total = 0
         for (i, stringNumber) in stringNumbers.enumerated() {
             if let number = Int(stringNumber) {
@@ -71,12 +71,12 @@ class Calculate {
                 }
             }
         }
-        
+
         textView.text = textView.text + "=\(total)"
-        
+
         clear()
     }
-    
+
     func updateDisplay() {
         var text = ""
         for (i, stringNumber) in stringNumbers.enumerated() {
@@ -89,11 +89,11 @@ class Calculate {
         }
         textView.text = text
     }
-    
+
     func clear() {
         stringNumbers = [String()]
         operators = ["+"]
         index = 0
     }
-    
+
 }
