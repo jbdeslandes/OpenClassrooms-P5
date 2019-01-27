@@ -13,39 +13,24 @@ class ViewController: UIViewController {
     
     var calculate = Calculate()
     
-//    var stringNumbers: [String] = [String()]
-//    var operators: [String] = ["+"]
-//    var index = 0
-//    var isExpressionCorrect: Bool {
-//        if let stringNumber = stringNumbers.last {
-//            if stringNumber.isEmpty {
-//                if stringNumbers.count == 1 {
-//                    let alertVC = UIAlertController(title: "Zéro!", message: "Démarrez un nouveau calcul !", preferredStyle: .alert)
-//                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//                    self.present(alertVC, animated: true, completion: nil)
-//                } else {
-//                    let alertVC = UIAlertController(title: "Zéro!", message: "Entrez une expression correcte !", preferredStyle: .alert)
-//                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//                    self.present(alertVC, animated: true, completion: nil)
-//                }
-//                return false
-//            }
-//        }
-//        return true
-//    }
-    
-//    var canAddOperator: Bool {
-//        if let stringNumber = stringNumbers.last {
-//            if stringNumber.isEmpty {
-//                let alertVC = UIAlertController(title: "Zéro!", message: "Expression incorrecte !", preferredStyle: .alert)
-//                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//                self.present(alertVC, animated: true, completion: nil)
-//                return false
-//            }
-//        }
-//        return true
-//    }
-    
+    func errorAlert(_ type: Int) {
+        if calculate.errorAlert {
+            switch type {
+            case 1:
+                if calculate.stringNumbers.last!.isEmpty {
+                    let alertVC = UIAlertController(title: "Erreur!", message: "Démarrez un nouveau calcul !", preferredStyle: .alert)
+                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertVC, animated: true, completion: nil)
+                }
+            case 2:
+                let alertVC = UIAlertController(title: "Zéro!", message: "Entrez une expression correcte !", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertVC, animated: true, completion: nil)
+            default:
+                print("Error alert crashes")
+            }
+        }
+    }
     
     // MARK: - Outlets
     
@@ -68,6 +53,8 @@ class ViewController: UIViewController {
             calculate.operators.append("+")
             calculate.stringNumbers.append("")
             textView.text = calculate.updateDisplay()
+        } else {
+            errorAlert(2)
         }
     }
     
@@ -76,12 +63,17 @@ class ViewController: UIViewController {
             calculate.operators.append("-")
             calculate.stringNumbers.append("")
             textView.text = calculate.updateDisplay()
+        } else {
+            errorAlert(2)
         }
     }
     
     @IBAction func equal() {
+        errorAlert(1)
         calculate.calculateTotal()
-        textView.text = "\(calculate.total)"
+        if !calculate.updateDisplay().isEmpty && calculate.isExpressionCorrect {
+            textView.text = "\(calculate.updateDisplay()) = \(calculate.total)"
+        }
         calculate.clear()
     }
     

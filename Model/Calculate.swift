@@ -16,9 +16,12 @@ class Calculate {
     var stringNumbers: [String] = [String()]
     var operators: [String] = ["+"]
     var index = 0
+    var errorAlert: Bool = false
+    
     var isExpressionCorrect: Bool {
         if let stringNumber = stringNumbers.last {
             if stringNumber.isEmpty {
+                errorAlert = true
                 return false
             }
         }
@@ -28,6 +31,7 @@ class Calculate {
     var canAddOperator: Bool {
         if let stringNumber = stringNumbers.last {
             if stringNumber.isEmpty {
+                errorAlert = true
                 return false
             }
         }
