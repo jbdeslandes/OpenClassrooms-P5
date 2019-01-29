@@ -28,16 +28,6 @@ class Calculate {
         return true
     }
     
-    var canAddOperator: Bool {
-        if let stringNumber = stringNumbers.last {
-            if stringNumber.isEmpty {
-                errorAlert = true
-                return false
-            }
-        }
-        return true
-    }
-    
     // MARK: - Methods
     
     func addNewNumber(_ newNumber: Int) {

@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plus() {
-        if calculate.canAddOperator {
+        if calculate.isExpressionCorrect {
             calculate.operators.append("+")
             calculate.stringNumbers.append("")
             textView.text = calculate.updateDisplay()
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func minus() {
-        if calculate.canAddOperator {
+        if calculate.isExpressionCorrect {
             calculate.operators.append("-")
             calculate.stringNumbers.append("")
             textView.text = calculate.updateDisplay()
