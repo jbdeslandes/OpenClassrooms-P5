@@ -40,7 +40,21 @@ class CalculateTestCase: XCTestCase {
         XCTAssertEqual(calculate.total, 2)
         XCTAssert(calculate.operators.last! == "-")
         XCTAssertTrue(calculate.isExpressionCorrect)
-        XCTAssertTrue(calculate.canAddOperator)
+    }
+    
+    func testGivenOperationIs10PlusMinus_WhenCalculatingTotal_ThenIsExpressionCorrectIsFalse() {
+        // Given
+        calculate.addNewNumber(10)
+        calculate.operators.append("+")
+        calculate.operators.append("-")
+        calculate.stringNumbers.append("")
+        
+        // When
+        calculate.calculateTotal()
+        
+        // Then
+        XCTAssertFalse(calculate.isExpressionCorrect)
+        XCTAssertTrue(calculate.errorAlert)
     }
     
     func testGivenOperationIs2Plus2_WhenCalculatingTotal_ThenUdpdateDisplayShouldSay2plus2Equals4() {
@@ -57,7 +71,6 @@ class CalculateTestCase: XCTestCase {
         XCTAssertEqual(calculate.total, 4)
         XCTAssert(calculate.operators.last! == "+")
         XCTAssertTrue(calculate.isExpressionCorrect)
-        XCTAssertTrue(calculate.canAddOperator)
         XCTAssertEqual(calculate.updateDisplay(), "2+2")
         
        
@@ -75,6 +88,7 @@ class CalculateTestCase: XCTestCase {
         XCTAssert(calculate.operators.last! == "+")
         XCTAssert(calculate.stringNumbers.last! == "")
         XCTAssertFalse(calculate.isExpressionCorrect)
+        XCTAssertTrue(calculate.errorAlert)
     }
 
 }
