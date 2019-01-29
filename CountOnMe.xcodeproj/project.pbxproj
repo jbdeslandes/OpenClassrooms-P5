@@ -7,35 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B30A78F821FF19D400D62ACD /* CalculateTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A78F721FF19D400D62ACD /* CalculateTestCase.swift */; };
+		B30A790821FF1A4400D62ACD /* ViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A790721FF1A4400D62ACD /* ViewControllerTestCase.swift */; };
 		B323939321FCE96F006D55A5 /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323939221FCE96F006D55A5 /* Calculate.swift */; };
 		C926DADD1D7581BB00477020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926DADC1D7581BB00477020 /* AppDelegate.swift */; };
 		C926DADF1D7581BB00477020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926DADE1D7581BB00477020 /* ViewController.swift */; };
 		C926DAE21D7581BB00477020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C926DAE01D7581BB00477020 /* Main.storyboard */; };
 		C926DAE41D7581BB00477020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C926DAE31D7581BB00477020 /* Assets.xcassets */; };
 		C926DAE71D7581BB00477020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C926DAE51D7581BB00477020 /* LaunchScreen.storyboard */; };
-		C926DAF21D7581BB00477020 /* Zozor_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926DAF11D7581BB00477020 /* Zozor_Tests.swift */; };
-		C926DAFD1D7581BB00477020 /* Zozor_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926DAFC1D7581BB00477020 /* Zozor_UITests.swift */; };
 		C9DA150A1DF08CF100B0974D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9DA15091DF08CF100B0974D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C926DAEE1D7581BB00477020 /* PBXContainerItemProxy */ = {
+		B30A78F221FF198A00D62ACD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C926DAD11D7581BB00477020 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C926DAD81D7581BB00477020;
-			remoteInfo = "Zozor+";
+			remoteInfo = CountOnMe;
 		};
-		C926DAF91D7581BB00477020 /* PBXContainerItemProxy */ = {
+		B30A790221FF1A1800D62ACD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C926DAD11D7581BB00477020 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C926DAD81D7581BB00477020;
-			remoteInfo = "Zozor+";
+			remoteInfo = CountOnMe;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B30A78ED21FF198A00D62ACD /* CountOnMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountOnMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30A78F121FF198A00D62ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B30A78F721FF19D400D62ACD /* CalculateTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTestCase.swift; sourceTree = "<group>"; };
+		B30A78FD21FF1A1800D62ACD /* CountOnMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountOnMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30A790121FF1A1800D62ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B30A790721FF1A4400D62ACD /* ViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTestCase.swift; sourceTree = "<group>"; };
 		B323939221FCE96F006D55A5 /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 		C926DAD91D7581BB00477020 /* CountOnMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountOnMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C926DADC1D7581BB00477020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,31 +50,25 @@
 		C926DAE31D7581BB00477020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C926DAE61D7581BB00477020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C926DAE81D7581BB00477020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C926DAED1D7581BB00477020 /* CountOnMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountOnMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C926DAF11D7581BB00477020 /* Zozor_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zozor_Tests.swift; sourceTree = "<group>"; };
-		C926DAF31D7581BB00477020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C926DAF81D7581BB00477020 /* CountOnMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountOnMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C926DAFC1D7581BB00477020 /* Zozor_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zozor_UITests.swift; sourceTree = "<group>"; };
-		C926DAFE1D7581BB00477020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9DA15091DF08CF100B0974D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B30A78EA21FF198A00D62ACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B30A78FA21FF1A1800D62ACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C926DAD61D7581BB00477020 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C926DAEA1D7581BB00477020 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C926DAF51D7581BB00477020 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,6 +78,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B30A78EE21FF198A00D62ACD /* CountOnMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				B30A78F721FF19D400D62ACD /* CalculateTestCase.swift */,
+				B30A78F121FF198A00D62ACD /* Info.plist */,
+			);
+			path = CountOnMeTests;
+			sourceTree = "<group>";
+		};
+		B30A78FE21FF1A1800D62ACD /* CountOnMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B30A790721FF1A4400D62ACD /* ViewControllerTestCase.swift */,
+				B30A790121FF1A1800D62ACD /* Info.plist */,
+			);
+			path = CountOnMeUITests;
+			sourceTree = "<group>";
+		};
 		B39C932A21F20E4F00F2CFB1 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +139,8 @@
 				B39C932C21F20E7900F2CFB1 /* Model */,
 				B39C932D21F20E9100F2CFB1 /* View */,
 				B39C932E21F20E9700F2CFB1 /* Controller */,
-				C926DAF01D7581BB00477020 /* CountOnMeTests */,
-				C926DAFB1D7581BB00477020 /* CountOnMeUITests */,
+				B30A78EE21FF198A00D62ACD /* CountOnMeTests */,
+				B30A78FE21FF1A1800D62ACD /* CountOnMeUITests */,
 				C926DADA1D7581BB00477020 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,35 +149,51 @@
 			isa = PBXGroup;
 			children = (
 				C926DAD91D7581BB00477020 /* CountOnMe.app */,
-				C926DAED1D7581BB00477020 /* CountOnMeTests.xctest */,
-				C926DAF81D7581BB00477020 /* CountOnMeUITests.xctest */,
+				B30A78ED21FF198A00D62ACD /* CountOnMeTests.xctest */,
+				B30A78FD21FF1A1800D62ACD /* CountOnMeUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C926DAF01D7581BB00477020 /* CountOnMeTests */ = {
-			isa = PBXGroup;
-			children = (
-				C926DAF11D7581BB00477020 /* Zozor_Tests.swift */,
-				C926DAF31D7581BB00477020 /* Info.plist */,
-			);
-			name = CountOnMeTests;
-			path = "Zozor+Tests";
-			sourceTree = "<group>";
-		};
-		C926DAFB1D7581BB00477020 /* CountOnMeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C926DAFC1D7581BB00477020 /* Zozor_UITests.swift */,
-				C926DAFE1D7581BB00477020 /* Info.plist */,
-			);
-			name = CountOnMeUITests;
-			path = "Zozor+UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B30A78EC21FF198A00D62ACD /* CountOnMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B30A78F421FF198A00D62ACD /* Build configuration list for PBXNativeTarget "CountOnMeTests" */;
+			buildPhases = (
+				B30A78E921FF198A00D62ACD /* Sources */,
+				B30A78EA21FF198A00D62ACD /* Frameworks */,
+				B30A78EB21FF198A00D62ACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B30A78F321FF198A00D62ACD /* PBXTargetDependency */,
+			);
+			name = CountOnMeTests;
+			productName = CountOnMeTests;
+			productReference = B30A78ED21FF198A00D62ACD /* CountOnMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B30A78FC21FF1A1800D62ACD /* CountOnMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B30A790421FF1A1800D62ACD /* Build configuration list for PBXNativeTarget "CountOnMeUITests" */;
+			buildPhases = (
+				B30A78F921FF1A1800D62ACD /* Sources */,
+				B30A78FA21FF1A1800D62ACD /* Frameworks */,
+				B30A78FB21FF1A1800D62ACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B30A790321FF1A1800D62ACD /* PBXTargetDependency */,
+			);
+			name = CountOnMeUITests;
+			productName = CountOnMeUITests;
+			productReference = B30A78FD21FF1A1800D62ACD /* CountOnMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C926DAD81D7581BB00477020 /* CountOnMe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C926DB011D7581BB00477020 /* Build configuration list for PBXNativeTarget "CountOnMe" */;
@@ -177,65 +211,32 @@
 			productReference = C926DAD91D7581BB00477020 /* CountOnMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C926DAEC1D7581BB00477020 /* CountOnMeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C926DB041D7581BB00477020 /* Build configuration list for PBXNativeTarget "CountOnMeTests" */;
-			buildPhases = (
-				C926DAE91D7581BB00477020 /* Sources */,
-				C926DAEA1D7581BB00477020 /* Frameworks */,
-				C926DAEB1D7581BB00477020 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C926DAEF1D7581BB00477020 /* PBXTargetDependency */,
-			);
-			name = CountOnMeTests;
-			productName = "Zozor+Tests";
-			productReference = C926DAED1D7581BB00477020 /* CountOnMeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C926DAF71D7581BB00477020 /* CountOnMeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C926DB071D7581BB00477020 /* Build configuration list for PBXNativeTarget "CountOnMeUITests" */;
-			buildPhases = (
-				C926DAF41D7581BB00477020 /* Sources */,
-				C926DAF51D7581BB00477020 /* Frameworks */,
-				C926DAF61D7581BB00477020 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C926DAFA1D7581BB00477020 /* PBXTargetDependency */,
-			);
-			name = CountOnMeUITests;
-			productName = "Zozor+UITests";
-			productReference = C926DAF81D7581BB00477020 /* CountOnMeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C926DAD11D7581BB00477020 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Ambroise Collon";
 				TargetAttributes = {
+					B30A78EC21FF198A00D62ACD = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C926DAD81D7581BB00477020;
+					};
+					B30A78FC21FF1A1800D62ACD = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = G7GBP4WKQU;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C926DAD81D7581BB00477020;
+					};
 					C926DAD81D7581BB00477020 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0810;
-					};
-					C926DAEC1D7581BB00477020 = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0810;
-						TestTargetID = C926DAD81D7581BB00477020;
-					};
-					C926DAF71D7581BB00477020 = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0810;
-						TestTargetID = C926DAD81D7581BB00477020;
 					};
 				};
 			};
@@ -253,13 +254,27 @@
 			projectRoot = "";
 			targets = (
 				C926DAD81D7581BB00477020 /* CountOnMe */,
-				C926DAEC1D7581BB00477020 /* CountOnMeTests */,
-				C926DAF71D7581BB00477020 /* CountOnMeUITests */,
+				B30A78EC21FF198A00D62ACD /* CountOnMeTests */,
+				B30A78FC21FF1A1800D62ACD /* CountOnMeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B30A78EB21FF198A00D62ACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B30A78FB21FF1A1800D62ACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C926DAD71D7581BB00477020 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,23 +286,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C926DAEB1D7581BB00477020 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C926DAF61D7581BB00477020 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B30A78E921FF198A00D62ACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30A78F821FF19D400D62ACD /* CalculateTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B30A78F921FF1A1800D62ACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30A790821FF1A4400D62ACD /* ViewControllerTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C926DAD51D7581BB00477020 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,34 +315,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C926DAE91D7581BB00477020 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C926DAF21D7581BB00477020 /* Zozor_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C926DAF41D7581BB00477020 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C926DAFD1D7581BB00477020 /* Zozor_UITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C926DAEF1D7581BB00477020 /* PBXTargetDependency */ = {
+		B30A78F321FF198A00D62ACD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C926DAD81D7581BB00477020 /* CountOnMe */;
-			targetProxy = C926DAEE1D7581BB00477020 /* PBXContainerItemProxy */;
+			targetProxy = B30A78F221FF198A00D62ACD /* PBXContainerItemProxy */;
 		};
-		C926DAFA1D7581BB00477020 /* PBXTargetDependency */ = {
+		B30A790321FF1A1800D62ACD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C926DAD81D7581BB00477020 /* CountOnMe */;
-			targetProxy = C926DAF91D7581BB00477020 /* PBXContainerItemProxy */;
+			targetProxy = B30A790221FF1A1800D62ACD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -349,6 +350,144 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B30A78F521FF198A00D62ACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = CountOnMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.deslandesjeanbaptiste.CountOnMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountOnMe.app/CountOnMe";
+			};
+			name = Debug;
+		};
+		B30A78F621FF198A00D62ACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = CountOnMeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.deslandesjeanbaptiste.CountOnMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountOnMe.app/CountOnMe";
+			};
+			name = Release;
+		};
+		B30A790521FF1A1800D62ACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G7GBP4WKQU;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = CountOnMeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.deslandesjeanbaptiste.CountOnMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CountOnMe;
+			};
+			name = Debug;
+		};
+		B30A790621FF1A1800D62ACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G7GBP4WKQU;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = CountOnMeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.deslandesjeanbaptiste.CountOnMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CountOnMe;
+			};
+			name = Release;
+		};
 		C926DAFF1D7581BB00477020 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,59 +604,27 @@
 			};
 			name = Release;
 		};
-		C926DB051D7581BB00477020 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Zozor+Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ambroisecollon.Zozor-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountOnMe.app/CountOnMe";
-			};
-			name = Debug;
-		};
-		C926DB061D7581BB00477020 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Zozor+Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ambroisecollon.Zozor-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountOnMe.app/CountOnMe";
-			};
-			name = Release;
-		};
-		C926DB081D7581BB00477020 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Zozor+UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ambroisecollon.Zozor-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Zozor+";
-			};
-			name = Debug;
-		};
-		C926DB091D7581BB00477020 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Zozor+UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ambroisecollon.Zozor-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Zozor+";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B30A78F421FF198A00D62ACD /* Build configuration list for PBXNativeTarget "CountOnMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B30A78F521FF198A00D62ACD /* Debug */,
+				B30A78F621FF198A00D62ACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B30A790421FF1A1800D62ACD /* Build configuration list for PBXNativeTarget "CountOnMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B30A790521FF1A1800D62ACD /* Debug */,
+				B30A790621FF1A1800D62ACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C926DAD41D7581BB00477020 /* Build configuration list for PBXProject "CountOnMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -532,24 +639,6 @@
 			buildConfigurations = (
 				C926DB021D7581BB00477020 /* Debug */,
 				C926DB031D7581BB00477020 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C926DB041D7581BB00477020 /* Build configuration list for PBXNativeTarget "CountOnMeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C926DB051D7581BB00477020 /* Debug */,
-				C926DB061D7581BB00477020 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C926DB071D7581BB00477020 /* Build configuration list for PBXNativeTarget "CountOnMeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C926DB081D7581BB00477020 /* Debug */,
-				C926DB091D7581BB00477020 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
