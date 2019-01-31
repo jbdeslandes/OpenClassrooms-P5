@@ -42,6 +42,25 @@ class CalculateTestCase: XCTestCase {
         XCTAssertTrue(calculate.isExpressionCorrect)
     }
     
+    func testGivenOperationIs2MultipliedBy4DividedBy8_WhenCalculatingTotal_ThenTotalEqual1() {
+        // Given
+        calculate.addNewNumber(2)
+        calculate.operators.append("x")
+        calculate.stringNumbers.append("")
+        calculate.addNewNumber(4)
+        calculate.operators.append("/")
+        calculate.stringNumbers.append("")
+        calculate.addNewNumber(8)
+        
+        // When
+        calculate.calculateTotal()
+        
+        // Then
+        XCTAssertEqual(calculate.total, 1)
+        XCTAssert(calculate.operators.last! == "/")
+        XCTAssertTrue(calculate.isExpressionCorrect)
+    }
+    
     func testGivenOperationIs10PlusMinus_WhenCalculatingTotal_ThenIsExpressionCorrectIsFalse() {
         // Given
         calculate.addNewNumber(10)
@@ -85,8 +104,24 @@ class CalculateTestCase: XCTestCase {
         calculate.clear()
         
         // Then
-        XCTAssert(calculate.operators.last! == "+")
+        XCTAssertEqual(calculate.operators.last!, "+")
         XCTAssert(calculate.stringNumbers.last! == "")
+        XCTAssertFalse(calculate.isExpressionCorrect)
+        XCTAssertTrue(calculate.errorAlert)
+    }
+    
+    func testGivenOperationIs7DividedBy0_WhenCalculateTotal_ThenShouldReturnError() {
+        // Given
+        calculate.addNewNumber(7)
+        calculate.operators.append("/")
+        calculate.stringNumbers.append("")
+        calculate.addNewNumber(0)
+        
+        // When
+        calculate.calculateTotal()
+        
+        // Then
+        XCTAssertEqual(calculate.operators.last!, "/")
         XCTAssertFalse(calculate.isExpressionCorrect)
         XCTAssertTrue(calculate.errorAlert)
     }
