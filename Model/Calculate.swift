@@ -25,6 +25,11 @@ class Calculate {
                 return false
             }
         }
+        
+        if stringNumbers.last == "0" && operators.last == "/" {
+            errorAlert = true
+            return false
+        }
         return true
     }
     
@@ -50,6 +55,13 @@ class Calculate {
                     total += number
                 } else if operators[i] == "-" {
                     total -= number
+                } else if operators[i] == "x" {
+                    total *= number
+                } else if operators[i] == "/" {
+                    if !isExpressionCorrect {
+                        return
+                    }
+                    total /= number
                 }
             }
         }
@@ -72,7 +84,7 @@ class Calculate {
     func clear() {
         stringNumbers = [String()]
         operators = ["+"]
-        index = 0
+//        index = 0
     }
     
 }
