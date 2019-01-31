@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     var calculate = Calculate()
     
-    func errorAlert(_ type: Int) {
+    func errorChecking(_ type: Int) {
         if calculate.errorAlert {
             switch type {
             case 1:
@@ -26,9 +26,34 @@ class ViewController: UIViewController {
                 let alertVC = UIAlertController(title: "Zéro!", message: "Entrez une expression correcte !", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(alertVC, animated: true, completion: nil)
+            case 3:
+                    textView.text = "Erreur"
             default:
                 print("Error alert crashes")
             }
+        }
+    }
+    
+    // MARK: - Methods
+    
+    func displayResult() {
+        errorChecking(1)
+        calculate.calculateTotal()
+        
+        if !calculate.updateDisplay().isEmpty && calculate.isExpressionCorrect {
+            textView.text = "\(calculate.updateDisplay()) = \(calculate.total)"
+        } else if !calculate.updateDisplay().isEmpty && !calculate.isExpressionCorrect {
+            errorChecking(3)
+        }
+    }
+    
+    func manageOperator(_ type: String) {
+        if calculate.isExpressionCorrect {
+            calculate.operators.append("\(type)")
+            calculate.stringNumbers.append("")
+            textView.text = calculate.updateDisplay()
+        } else {
+            errorChecking(2)
         }
     }
     
@@ -49,31 +74,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plus() {
-        if calculate.isExpressionCorrect {
-            calculate.operators.append("+")
-            calculate.stringNumbers.append("")
-            textView.text = calculate.updateDisplay()
-        } else {
-            errorAlert(2)
-        }
+        manageOperator("+")
     }
     
     @IBAction func minus() {
-        if calculate.isExpressionCorrect {
-            calculate.operators.append("-")
-            calculate.stringNumbers.append("")
-            textView.text = calculate.updateDisplay()
-        } else {
-            errorAlert(2)
-        }
+        manageOperator("-")
+    }
+    
+    @IBAction func multiply() {
+        manageOperator("x")
+    }
+    
+    @IBAction func divide() {
+        manageOperator("/")
     }
     
     @IBAction func equal() {
-        errorAlert(1)
-        calculate.calculateTotal()
-        if !calculate.updateDisplay().isEmpty && calculate.isExpressionCorrect {
-            textView.text = "\(calculate.updateDisplay()) = \(calculate.total)"
-        }
+        displayResult()
         calculate.clear()
     }
     
