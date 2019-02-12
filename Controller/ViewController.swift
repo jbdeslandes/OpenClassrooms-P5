@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     var calculate = Calculate()
     
+    // MARK: - Methods
+    
     func errorChecking(_ type: Int) {
         if calculate.errorAlert {
             switch type {
@@ -26,15 +28,11 @@ class ViewController: UIViewController {
                 let alertVC = UIAlertController(title: "Zéro!", message: "Entrez une expression correcte !", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(alertVC, animated: true, completion: nil)
-            case 3:
-                    textView.text = "Erreur"
             default:
                 print("Error alert crashes")
             }
         }
     }
-    
-    // MARK: - Methods
     
     func displayResult() {
         errorChecking(1)
@@ -43,7 +41,6 @@ class ViewController: UIViewController {
         if !calculate.updateDisplay().isEmpty && calculate.isExpressionCorrect {
             textView.text = "\(calculate.updateDisplay()) = \(calculate.total)"
         } else if !calculate.updateDisplay().isEmpty && !calculate.isExpressionCorrect {
-            errorChecking(3)
         }
     }
     
@@ -81,17 +78,13 @@ class ViewController: UIViewController {
         manageOperator("-")
     }
     
-    @IBAction func multiply() {
-        manageOperator("x")
-    }
-    
-    @IBAction func divide() {
-        manageOperator("/")
-    }
-    
     @IBAction func equal() {
         displayResult()
+    }
+    
+    @IBAction func clear() {
         calculate.clear()
+        textView.text = "0"
     }
     
 }

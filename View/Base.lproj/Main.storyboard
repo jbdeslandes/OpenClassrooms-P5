@@ -36,7 +36,7 @@
                                 <rect key="frame" x="16.5" y="304.5" width="342" height="223"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GZQ-ZL-Chx">
-                                        <rect key="frame" x="0.0" y="0.0" width="92" height="146"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="198"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uw-jf-qlX">
                                                 <rect key="frame" x="0.0" y="0.0" width="92" height="42"/>
@@ -83,11 +83,27 @@
                                                     <action selector="tappedNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzA-WF-CXf"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61e-cI-VQW">
+                                                <rect key="frame" x="0.0" y="156" width="92" height="42"/>
+                                                <color key="backgroundColor" red="0.60392156860000001" green="0.57647058819999997" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="61e-cI-VQW" secondAttribute="height" multiplier="46:21" id="iKf-Q1-k60"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <inset key="contentEdgeInsets" minX="18" minY="5" maxX="18" maxY="5"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clear" destination="BYZ-38-t0r" eventType="touchUpInside" id="C6N-nr-BdY"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="cKJ-lP-BeQ" firstAttribute="height" secondItem="6uw-jf-qlX" secondAttribute="height" id="49y-g0-RPE"/>
                                             <constraint firstItem="86l-DO-J8m" firstAttribute="height" secondItem="6uw-jf-qlX" secondAttribute="height" id="9qd-aP-nKZ"/>
                                             <constraint firstItem="86l-DO-J8m" firstAttribute="width" secondItem="6uw-jf-qlX" secondAttribute="width" id="gUa-cV-fDh"/>
+                                            <constraint firstItem="61e-cI-VQW" firstAttribute="width" secondItem="61e-cI-VQW" secondAttribute="height" multiplier="46:21" id="mqk-XJ-B5i"/>
                                             <constraint firstItem="cKJ-lP-BeQ" firstAttribute="width" secondItem="6uw-jf-qlX" secondAttribute="width" id="ypB-W0-J3a"/>
                                         </constraints>
                                     </stackView>
@@ -225,10 +241,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JCS-G8-93l">
-                                <rect key="frame" x="4.5" y="553" width="366" height="76"/>
+                                <rect key="frame" x="15" y="553" width="345" height="76"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9t-JB-KHx">
-                                        <rect key="frame" x="0.0" y="0.0" width="57" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="76"/>
                                         <color key="backgroundColor" red="0.46913260918215349" green="0.71495165745856348" blue="0.62407517235679066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <inset key="contentEdgeInsets" minX="9" minY="12.5" maxX="9" maxY="12.5"/>
@@ -240,7 +256,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1md-mv-IxN">
-                                        <rect key="frame" x="77" y="0.0" width="57.5" height="76"/>
+                                        <rect key="frame" x="121.5" y="0.0" width="102" height="76"/>
                                         <color key="backgroundColor" red="0.87294975828729282" green="0.37112226881503746" blue="0.32504552810982973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <inset key="contentEdgeInsets" minX="9" minY="12.5" maxX="9" maxY="12.5"/>
@@ -251,33 +267,9 @@
                                             <action selector="minus" destination="BYZ-38-t0r" eventType="touchUpInside" id="axZ-P6-JsH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmR-6T-ROY">
-                                        <rect key="frame" x="154.5" y="0.0" width="57" height="76"/>
-                                        <color key="backgroundColor" red="0.39607843139999999" green="0.5568627451" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                        <inset key="contentEdgeInsets" minX="9" minY="12.5" maxX="9" maxY="12.5"/>
-                                        <state key="normal" title="x">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="multiply" destination="BYZ-38-t0r" eventType="touchUpInside" id="rCS-cn-Miw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJq-ft-kIT">
-                                        <rect key="frame" x="231.5" y="0.0" width="57.5" height="76"/>
-                                        <color key="backgroundColor" red="0.90588235294117647" green="0.65098039215686276" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                        <inset key="contentEdgeInsets" minX="9" minY="12.5" maxX="9" maxY="12.5"/>
-                                        <state key="normal" title="/">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="divide" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agp-Dk-EU1"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9e-qZ-ZAT">
-                                        <rect key="frame" x="309" y="0.0" width="57" height="76"/>
-                                        <color key="backgroundColor" red="0.75294117650000003" green="0.7725490196" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="243.5" y="0.0" width="101.5" height="76"/>
+                                        <color key="backgroundColor" red="0.94117647058823528" green="0.63921568627450975" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <inset key="contentEdgeInsets" minX="9" minY="12.5" maxX="9" maxY="12.5"/>
                                         <state key="normal" title="=">
@@ -289,12 +281,8 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="AmR-6T-ROY" firstAttribute="height" secondItem="u9t-JB-KHx" secondAttribute="height" id="9yq-W6-ecJ"/>
                                     <constraint firstItem="1md-mv-IxN" firstAttribute="width" secondItem="u9t-JB-KHx" secondAttribute="width" id="Aus-sw-fpE"/>
-                                    <constraint firstItem="AmR-6T-ROY" firstAttribute="width" secondItem="u9t-JB-KHx" secondAttribute="width" id="K7D-z1-Pvb"/>
-                                    <constraint firstItem="GJq-ft-kIT" firstAttribute="height" secondItem="u9t-JB-KHx" secondAttribute="height" id="MRS-hb-1VW"/>
                                     <constraint firstItem="D9e-qZ-ZAT" firstAttribute="width" secondItem="u9t-JB-KHx" secondAttribute="width" id="OFL-Qi-YTF"/>
-                                    <constraint firstItem="GJq-ft-kIT" firstAttribute="width" secondItem="u9t-JB-KHx" secondAttribute="width" id="gIi-Fk-Dd2"/>
                                     <constraint firstItem="1md-mv-IxN" firstAttribute="height" secondItem="u9t-JB-KHx" secondAttribute="height" id="kAA-LE-wU2"/>
                                     <constraint firstItem="D9e-qZ-ZAT" firstAttribute="height" secondItem="u9t-JB-KHx" secondAttribute="height" id="syS-5R-dHc"/>
                                 </constraints>
@@ -306,8 +294,7 @@
                             <constraint firstItem="aiF-me-Far" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4am-Dp-Fmd"/>
                             <constraint firstItem="aiF-me-Far" firstAttribute="leading" secondItem="CT0-fb-Raf" secondAttribute="leading" id="5Ze-xO-IJh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JCS-G8-93l" secondAttribute="bottom" constant="38" id="8Dv-0D-p0G"/>
-                            <constraint firstAttribute="trailing" secondItem="JCS-G8-93l" secondAttribute="trailing" constant="4.5" id="GRh-g3-wUl"/>
-                            <constraint firstItem="JCS-G8-93l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="4.5" id="Yb6-qU-xdo"/>
+                            <constraint firstItem="JCS-G8-93l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Yb6-qU-xdo"/>
                             <constraint firstItem="JCS-G8-93l" firstAttribute="top" secondItem="aiF-me-Far" secondAttribute="bottom" constant="25.5" id="aPc-xP-wRa"/>
                             <constraint firstItem="aiF-me-Far" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lNx-Vf-7JC"/>
                             <constraint firstItem="aiF-me-Far" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="luZ-TS-q2k"/>

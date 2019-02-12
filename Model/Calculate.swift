@@ -48,20 +48,12 @@ class Calculate {
             return
         }
         
-        total = 0
         for (i, stringNumber) in stringNumbers.enumerated() {
             if let number = Int(stringNumber) {
                 if operators[i] == "+" {
                     total += number
                 } else if operators[i] == "-" {
                     total -= number
-                } else if operators[i] == "x" {
-                    total *= number
-                } else if operators[i] == "/" {
-                    if !isExpressionCorrect {
-                        return
-                    }
-                    total /= number
                 }
             }
         }
@@ -84,7 +76,7 @@ class Calculate {
     func clear() {
         stringNumbers = [String()]
         operators = ["+"]
-//        index = 0
+        total = 0
     }
     
 }
