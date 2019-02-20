@@ -38,9 +38,9 @@ class ViewController: UIViewController {
         errorChecking(1)
         calculate.calculateTotal()
         
-        if !calculate.updateDisplay().isEmpty && calculate.isExpressionCorrect {
-            textView.text = "\(calculate.updateDisplay()) = \(calculate.total)"
-        } else if !calculate.updateDisplay().isEmpty && !calculate.isExpressionCorrect {
+        if !calculate.updateDisplay().isEmpty {
+            totalView.text = "= \(calculate.total)"
+            calculate.total = 0
         }
     }
     
@@ -57,6 +57,7 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var totalView: UITextView!
     @IBOutlet var numberButtons: [UIButton]!
     
     // MARK: - Actions
@@ -84,7 +85,8 @@ class ViewController: UIViewController {
     
     @IBAction func clear() {
         calculate.clear()
-        textView.text = "0"
+        totalView.text = "= 0"
+        textView.text = ""
     }
     
 }
