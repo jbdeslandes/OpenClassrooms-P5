@@ -16,28 +16,32 @@ class ViewController: UIViewController {
     // MARK: - Methods
     
     func errorChecking(_ type: Int) {
-        if calculate.errorAlert {
             switch type {
             case 1:
-                if calculate.stringNumbers.last!.isEmpty {
-                    let alertVC = UIAlertController(title: "Erreur!", message: "Démarrez un nouveau calcul !", preferredStyle: .alert)
-                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                    self.present(alertVC, animated: true, completion: nil)
-                }
+                let alertVC = UIAlertController(title: "Erreur!", message: "Démarrez un nouveau calcul !", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertVC, animated: true, completion: nil)
             case 2:
                 let alertVC = UIAlertController(title: "Zéro!", message: "Entrez une expression correcte !", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertVC, animated: true, completion: nil)
+            case 3:
+                let alertVC = UIAlertController(title: "Erreur!", message: "Entrez un nombre de 10 chiffres maximum !", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(alertVC, animated: true, completion: nil)
             default:
                 print("Error alert crashes")
             }
-        }
     }
     
     func displayResult() {
-        errorChecking(1)
-        calculate.calculateTotal()
+        if calculate.isExpressionCorrect {
+            calculate.calculateTotal()
+        } else {
+            errorChecking(1)
+        }
         
+        // (BONUS 1 - Continue operation in progress & refresh total value)
         if !calculate.updateDisplay().isEmpty {
             totalView.text = "= \(calculate.total)"
             calculate.total = 0
@@ -65,9 +69,16 @@ class ViewController: UIViewController {
     @IBAction func tappedNumberButton(_ sender: UIButton) {
         for (i, numberButton) in numberButtons.enumerated() {
             if sender == numberButton {
-                calculate.addNewNumber(i)
-                textView.text = calculate.updateDisplay()
+                if !calculate.isNumberTooLong {
+                    calculate.addNewNumber(i)
+                    textView.text = calculate.updateDisplay()
+                } else {
+                    errorChecking(3)
+                }
             }
+            // (BONUS 3 - Automatic Scrolling during operation)
+            let range = NSMakeRange(textView.text.count - 1, 0)
+            textView.scrollRangeToVisible(range)
         }
     }
     
@@ -83,6 +94,7 @@ class ViewController: UIViewController {
         displayResult()
     }
     
+    // (BONUS 2 - Clear button to reset total & operation)
     @IBAction func clear() {
         calculate.clear()
         totalView.text = "= 0"

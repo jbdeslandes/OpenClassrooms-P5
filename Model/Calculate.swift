@@ -15,22 +15,24 @@ class Calculate {
     var total: Int = 0
     var stringNumbers: [String] = [String()]
     var operators: [String] = ["+"]
-    var index = 0
-    var errorAlert: Bool = false
     
     var isExpressionCorrect: Bool {
         if let stringNumber = stringNumbers.last {
             if stringNumber.isEmpty {
-                errorAlert = true
                 return false
             }
         }
-        
-        if stringNumbers.last == "0" && operators.last == "/" {
-            errorAlert = true
-            return false
-        }
         return true
+    }
+    
+    // (BONUS 4 - To Keep operations clearable)
+    var isNumberTooLong: Bool {
+        if let stringNumber = stringNumbers.last {
+            if stringNumber.count > 9 {
+                return true
+            }
+        }
+        return false
     }
     
     // MARK: - Methods

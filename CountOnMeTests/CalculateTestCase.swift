@@ -40,6 +40,7 @@ class CalculateTestCase: XCTestCase {
         XCTAssertEqual(calculate.total, 2)
         XCTAssert(calculate.operators.last! == "-")
         XCTAssertTrue(calculate.isExpressionCorrect)
+        XCTAssertFalse(calculate.isNumberTooLong)
     }
     
     func testGivenOperationIs10PlusMinus_WhenCalculatingTotal_ThenIsExpressionCorrectIsFalse() {
@@ -54,7 +55,6 @@ class CalculateTestCase: XCTestCase {
         
         // Then
         XCTAssertFalse(calculate.isExpressionCorrect)
-        XCTAssertTrue(calculate.errorAlert)
     }
     
     func testGivenOperationIs2Plus2_WhenCalculatingTotal_ThenUdpdateDisplayShouldSay2plus2Equals4() {
@@ -72,8 +72,7 @@ class CalculateTestCase: XCTestCase {
         XCTAssert(calculate.operators.last! == "+")
         XCTAssertTrue(calculate.isExpressionCorrect)
         XCTAssertEqual(calculate.updateDisplay(), "2+2")
-        
-       
+        XCTAssertFalse(calculate.isNumberTooLong)
     }
     
     func testGivenTotalIs2_WhenStartingNewCalculation_ThenClear() {
@@ -88,23 +87,15 @@ class CalculateTestCase: XCTestCase {
         XCTAssertEqual(calculate.operators.last!, "+")
         XCTAssert(calculate.stringNumbers.last! == "")
         XCTAssertFalse(calculate.isExpressionCorrect)
-        XCTAssertTrue(calculate.errorAlert)
     }
     
-    func testGivenOperationIs7DividedBy0_WhenCalculateTotal_ThenShouldReturnError() {
-        // Given
-        calculate.addNewNumber(7)
-        calculate.operators.append("/")
-        calculate.stringNumbers.append("")
-        calculate.addNewNumber(0)
-        
+    func testGivenStringNumbersIsEmpty_WhenAdding11Numbers_ThenIsNumberTooLongShouldBeTrue() {
         // When
-        calculate.calculateTotal()
+        calculate.addNewNumber(10000000000)
         
         // Then
-        XCTAssertEqual(calculate.operators.last!, "/")
-        XCTAssertFalse(calculate.isExpressionCorrect)
-        XCTAssertTrue(calculate.errorAlert)
+        XCTAssertTrue(calculate.isExpressionCorrect)
+        XCTAssertTrue(calculate.isNumberTooLong)
     }
 
 }
